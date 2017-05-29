@@ -22,7 +22,7 @@ WIZ_CDK = Selfhosted
 # typically /usr/src/linux. This directory is used when
 # building the kernel modules.
 
-LIN_KERNEL_DIR = /usr/src/linux-4.9.20
+LIN_KERNEL_DIR = /usr/src/linux
 
 # Defines whether to build MDIS to support RTAI. If enabled,
 # MDIS modules support RTAI in addition to the standard Linux
@@ -100,33 +100,34 @@ DEVNODE_INSTALL_DIR = /dev
 MDIS_EXTRA_DEFS = -DCONFIG_MEN_VME_KERNELIF -DDBG
 
 ALL_LL_DRIVERS = \
-        M099/DRIVER/COM/driver.mak \
-        SMB2/DRIVER/COM/driver.mak
+	M099/DRIVER/COM/driver_sw.mak
 
-
-ALL_BB_DRIVERS = A201/DRIVER/COM/driver_sw.mak \
-                 SMB2BB/DRIVER/NATIVE/driver.mak
+ALL_BB_DRIVERS = A201/DRIVER/COM/driver_sw.mak
 
 ALL_USR_LIBS = \
 	USR_OSS/library.mak \
 	USR_UTL/COM/library.mak \
-	VME4L_API/library.mak \
-        SMB2_API/COM/library.mak
-
+	VME4L_API/library.mak
 
 ALL_CORE_LIBS = \
 	DBG/library.mak \
 	OSS/library.mak \
 	CHAMELEON/COM/library.mak
 
-ALL_LL_TOOLS = M099/TOOLS/M99_LATENCY/COM/program.mak \
-	        SMB2/TOOLS/SMB2_CTRL/COM/program.mak \
-	        SMB2/TOOLS/SMB2_BOARDIDENT/COM/program.mak \
-	        SMB2/TOOLS/SMB2_EEPROD2/COM/program.mak
-
+ALL_LL_TOOLS = M099/TOOLS/M99_LATENCY/COM/program.mak
 
 ALL_COM_TOOLS = \
+	MDIS_API/M_ERRSTR/COM/program.mak \
+	MDIS_API/M_GETBLOCK/COM/program.mak \
+	MDIS_API/M_GETSTAT/COM/program.mak \
+	MDIS_API/M_GETSTAT_BLK/COM/program.mak \
+	MDIS_API/M_MOD_ID/COM/program.mak \
 	MDIS_API/M_OPEN/COM/program.mak \
+	MDIS_API/M_READ/COM/program.mak \
+	MDIS_API/M_REV_ID/COM/program.mak \
+	MDIS_API/M_SETBLOCK/COM/program.mak \
+	MDIS_API/M_SETSTAT/COM/program.mak \
+	MDIS_API/M_SETSTAT_BLK/COM/program.mak \
 	MDIS_API/M_WRITE/COM/program.mak \
 	VME4L_API/VME4L_RWEX/program.mak \
 	VME4L_API/VME4L_PLDZ002_LOCMON/program.mak \
@@ -145,10 +146,10 @@ ALL_COM_TOOLS = \
 ALL_NATIVE_DRIVERS = \
 	DRIVERS/VME4LX/DRIVER_K24/driver.mak \
 	DRIVERS/VME4LX/DRIVER_K24/driver_pldz002_cham.mak \
-	DRIVERS/CHAMELEON/driver.mak \
-        DRIVERS/ETH_16Z077/DRIVER/driver.mak
+	DRIVERS/CHAMELEON/driver.mak
 
 
+#        DRIVERS/ETH_16Z077/DRIVER/driver.mak
 #	DRIVERS/VME4LX/DRIVER_K24/driver_tsi148.mak \
 
 
