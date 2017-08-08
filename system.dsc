@@ -12,33 +12,6 @@ cpu {
     HW_TYPE = STRING A20
     _WIZ_MODEL = STRING A20
 }
-smb2_bb {
-
-    # ------------------------------------------------------------------------
-    #        general parameters (don't modify)
-    # ------------------------------------------------------------------------
-    DESC_TYPE = U_INT32 0x2
-    HW_TYPE = STRING SMB2
-    _WIZ_MODEL = STRING SMBPCI_ICH
-    _WIZ_BUSIF = STRING cpu,1
-
-    # ------------------------------------------------------------------------
-    #           SMBus parameters
-    # ------------------------------------------------------------------------
-    SMB_BUSNBR = U_INT32 0x0
-    SMBDEV_0 {
-        NAME = STRING smb2_2
-    }
-
-    # ------------------------------------------------------------------------
-    #        debug levels (optional)
-    #        these keys have only effect on debug drivers
-    # ------------------------------------------------------------------------
-    DEBUG_LEVEL = U_INT32 0xc0008000
-    DEBUG_LEVEL_BK = U_INT32 0xc0008000
-    DEBUG_LEVEL_OSS = U_INT32 0xc0008000
-    DEBUG_LEVEL_DESC = U_INT32 0xc0008000
-}
 a201_1 {
 
     # ------------------------------------------------------------------------
@@ -68,7 +41,8 @@ m99_1 {
     #        general parameters (don't modify)
     # ------------------------------------------------------------------------
     DESC_TYPE = U_INT32 0x1
-    HW_TYPE = STRING M99
+    HW_TYPE = STRING M99_SW
+# HW_TYPE = STRING M99
     _WIZ_MODEL = STRING M99
 
     # ------------------------------------------------------------------------
@@ -95,43 +69,5 @@ m99_1 {
     DEBUG_LEVEL_OSS = U_INT32 0xc0008000
     DEBUG_LEVEL_DESC = U_INT32 0xc0008000
     DEBUG_LEVEL_MBUF = U_INT32 0xc0008000
-}
-smb2_dev {
-
-    # ------------------------------------------------------------------------
-    #        general parameters (don't modify)
-    # ------------------------------------------------------------------------
-    DESC_TYPE = U_INT32 0x1
-    HW_TYPE = STRING SMB2
-    _WIZ_MODEL = STRING SMBUS_F14
-
-    # ------------------------------------------------------------------------
-    #        reference to base board
-    # ------------------------------------------------------------------------
-    BOARD_NAME = STRING smb2_bb
-    DEVICE_SLOT = U_INT32 0x0
-
-    # ------------------------------------------------------------------------
-    #        device parameters
-    # ------------------------------------------------------------------------
-
-    # ------------------------------------------------------------------------
-    #           SMBus parameters
-    # ------------------------------------------------------------------------
-
-    # SMBus bus number
-    SMB_BUSNBR = U_INT32 0
-
-    # Array of excluded SMB device addresses.
-    # SMB_DEVS_EXCLUDE = BINARY 0xd2,0xa0,0x60,0xa4,0x64,0x98,0x6e
-
-    # ------------------------------------------------------------------------
-    #        debug levels (optional)
-    #        these keys have only effect on debug drivers
-    # ------------------------------------------------------------------------
-    DEBUG_LEVEL = U_INT32 0xc0008000
-    DEBUG_LEVEL_MK = U_INT32 0xc0008000
-    DEBUG_LEVEL_OSS = U_INT32 0xc0008000
-    DEBUG_LEVEL_DESC = U_INT32 0xc0008000
 }
 # EOF

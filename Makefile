@@ -22,10 +22,7 @@ WIZ_CDK = Selfhosted
 # typically /usr/src/linux. This directory is used when
 # building the kernel modules.
 
-
-LIN_KERNEL_DIR ?= /usr/src/linux-stable
-# LIN_KERNEL_DIR = /usr/src/linux-4.4.59-fede
-# LIN_KERNEL_DIR = /usr/src/linux-headers-4.4.0-47-generic
+LIN_KERNEL_DIR = /usr/src/linux
 
 # Defines whether to build MDIS to support RTAI. If enabled,
 # MDIS modules support RTAI in addition to the standard Linux
@@ -112,7 +109,6 @@ ALL_USR_LIBS = \
 	USR_UTL/COM/library.mak \
 	VME4L_API/library.mak
 
-
 ALL_CORE_LIBS = \
 	DBG/library.mak \
 	OSS/library.mak \
@@ -121,7 +117,17 @@ ALL_CORE_LIBS = \
 ALL_LL_TOOLS =
 
 ALL_COM_TOOLS = \
+	MDIS_API/M_ERRSTR/COM/program.mak \
+	MDIS_API/M_GETBLOCK/COM/program.mak \
+	MDIS_API/M_GETSTAT/COM/program.mak \
+	MDIS_API/M_GETSTAT_BLK/COM/program.mak \
+	MDIS_API/M_MOD_ID/COM/program.mak \
 	MDIS_API/M_OPEN/COM/program.mak \
+	MDIS_API/M_READ/COM/program.mak \
+	MDIS_API/M_REV_ID/COM/program.mak \
+	MDIS_API/M_SETBLOCK/COM/program.mak \
+	MDIS_API/M_SETSTAT/COM/program.mak \
+	MDIS_API/M_SETSTAT_BLK/COM/program.mak \
 	MDIS_API/M_WRITE/COM/program.mak \
 	VME4L_API/VME4L_RWEX/program.mak \
 	VME4L_API/VME4L_PLDZ002_LOCMON/program.mak \
@@ -138,8 +144,11 @@ ALL_COM_TOOLS = \
 ALL_NATIVE_DRIVERS = \
 	DRIVERS/VME4LX/DRIVER_K24/driver.mak \
 	DRIVERS/VME4LX/DRIVER_K24/driver_pldz002_cham.mak \
-	DRIVERS/CHAMELEON/driver.mak \
-        DRIVERS/ETH_16Z077/DRIVER/driver.mak
+	DRIVERS/CHAMELEON/driver.mak
+
+ALL_NATIVE_LIBS =
+
+ALL_NATIVE_TOOLS =
 
 ALL_NATIVE_LIBS =
 
