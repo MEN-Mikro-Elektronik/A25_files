@@ -15,3 +15,4 @@ mknod /dev/vme4l_slave2	 	c 230 13
 mknod /dev/vme4l_slave3	 	c 230 14
 mknod /dev/vme4l_slave4	 	c 230 15
 mknod /dev/vme4l_slave5       	c 230 16
+mknod /dev/vme4l_cr_csr    	c 230 30
