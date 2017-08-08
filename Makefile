@@ -22,7 +22,10 @@ WIZ_CDK = Selfhosted
 # typically /usr/src/linux. This directory is used when
 # building the kernel modules.
 
-LIN_KERNEL_DIR = /usr/src/linux-4.9.20
+
+LIN_KERNEL_DIR ?= /usr/src/linux-stable
+# LIN_KERNEL_DIR = /usr/src/linux-4.4.59-fede
+# LIN_KERNEL_DIR = /usr/src/linux-headers-4.4.0-47-generic
 
 # Defines whether to build MDIS to support RTAI. If enabled,
 # MDIS modules support RTAI in addition to the standard Linux
@@ -99,10 +102,7 @@ DEVNODE_INSTALL_DIR = /dev
 
 MDIS_EXTRA_DEFS = -DCONFIG_MEN_VME_KERNELIF -DDBG
 
-ALL_LL_DRIVERS = \
-        M099/DRIVER/COM/driver.mak \
-        SMB2/DRIVER/COM/driver.mak
-
+ALL_LL_DRIVERS =
 
 ALL_BB_DRIVERS = A201/DRIVER/COM/driver_sw.mak \
                  SMB2BB/DRIVER/NATIVE/driver.mak
@@ -110,8 +110,7 @@ ALL_BB_DRIVERS = A201/DRIVER/COM/driver_sw.mak \
 ALL_USR_LIBS = \
 	USR_OSS/library.mak \
 	USR_UTL/COM/library.mak \
-	VME4L_API/library.mak \
-        SMB2_API/COM/library.mak
+	VME4L_API/library.mak
 
 
 ALL_CORE_LIBS = \
@@ -119,11 +118,7 @@ ALL_CORE_LIBS = \
 	OSS/library.mak \
 	CHAMELEON/COM/library.mak
 
-ALL_LL_TOOLS = M099/TOOLS/M99_LATENCY/COM/program.mak \
-	        SMB2/TOOLS/SMB2_CTRL/COM/program.mak \
-	        SMB2/TOOLS/SMB2_BOARDIDENT/COM/program.mak \
-	        SMB2/TOOLS/SMB2_EEPROD2/COM/program.mak
-
+ALL_LL_TOOLS =
 
 ALL_COM_TOOLS = \
 	MDIS_API/M_OPEN/COM/program.mak \
@@ -131,8 +126,6 @@ ALL_COM_TOOLS = \
 	VME4L_API/VME4L_RWEX/program.mak \
 	VME4L_API/VME4L_PLDZ002_LOCMON/program.mak \
 	VME4L_API/VME4L_TSI148_LOCMON/program.mak \
-	VME4L_API/VME4L_M99IRQ/program.mak \
-	VME4L_API/VME4L_M99IRQ/program_tsi148.mak \
 	VME4L_API/VME4L_MMAP/program.mak \
 	VME4L_API/VME4L_MBOX/program.mak \
 	VME4L_API/VME4L_MTEST/program.mak \
@@ -148,13 +141,9 @@ ALL_NATIVE_DRIVERS = \
 	DRIVERS/CHAMELEON/driver.mak \
         DRIVERS/ETH_16Z077/DRIVER/driver.mak
 
+ALL_NATIVE_LIBS =
 
-#	DRIVERS/VME4LX/DRIVER_K24/driver_tsi148.mak \
-
-
-ALL_NATIVE_LIBS = 
-
-ALL_NATIVE_TOOLS = 
+ALL_NATIVE_TOOLS =
 
 ALL_DESC = system
 
