@@ -30,10 +30,10 @@ a201_1 {
     #        debug levels (optional)
     #        these keys have only effect on debug drivers
     # ------------------------------------------------------------------------
-    DEBUG_LEVEL = U_INT32 0xc0008000
-    DEBUG_LEVEL_BK = U_INT32 0xc0008000
-    DEBUG_LEVEL_OSS = U_INT32 0xc0008000
-    DEBUG_LEVEL_DESC = U_INT32 0xc0008000
+    DEBUG_LEVEL = U_INT32 0xc0008007
+    DEBUG_LEVEL_BK = U_INT32 0xc0008007
+    DEBUG_LEVEL_OSS = U_INT32 0xc0008007
+    DEBUG_LEVEL_DESC = U_INT32 0xc0008007
 }
 m99_1 {
 

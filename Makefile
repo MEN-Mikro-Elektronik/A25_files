@@ -22,7 +22,7 @@ WIZ_CDK = Selfhosted
 # typically /usr/src/linux. This directory is used when
 # building the kernel modules.
 
-LIN_KERNEL_DIR = /usr/src/linux
+LIN_KERNEL_DIR = /usr/src/linux-current
 
 # Defines whether to build MDIS to support RTAI. If enabled,
 # MDIS modules support RTAI in addition to the standard Linux
@@ -101,8 +101,10 @@ MDIS_EXTRA_DEFS = -DCONFIG_MEN_VME_KERNELIF
 
 ALL_LL_DRIVERS =
 
-ALL_BB_DRIVERS = A201/DRIVER/COM/driver_sw.mak \
-                 SMB2BB/DRIVER/NATIVE/driver.mak
+ALL_BB_DRIVERS =
+
+# A201/DRIVER/COM/driver_sw.mak \
+# SMB2BB/DRIVER/NATIVE/driver.mak
 
 ALL_USR_LIBS = \
 	USR_OSS/library.mak \
