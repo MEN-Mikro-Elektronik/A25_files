@@ -109,7 +109,14 @@ ALL_BB_DRIVERS =
 ALL_USR_LIBS = \
 	USR_OSS/library.mak \
 	USR_UTL/COM/library.mak \
-	VME4L_API/library.mak
+	VME4L_API/library.mak \
+	CHAMELEON/COM/library_usr.mak \
+	CHAMELEON/COM/library_usr_sw.mak \
+	CHAMELEON/COM/library_usr_io.mak \
+	CHAMELEON/COM/library_usr_io_sw.mak \
+	OSS/library_usr.mak \
+	DBG/library_usr.mak \
+ 	pciutils/lib/library.mak
 
 ALL_CORE_LIBS = \
 	DBG/library.mak \
@@ -141,11 +148,12 @@ ALL_COM_TOOLS = \
 	VME4L_API/VME4L_SLVWIN/program.mak \
 	VME4L_API/VME4L_SPCYCLE/program.mak \
 	VME4L_API/VME4L_CTRL/program.mak \
-	VME4L_API/VME4L_IRQGEN/program.mak
+	VME4L_API/VME4L_IRQGEN/program.mak \
+	FPGA_LOAD/program.mak
 
 ALL_NATIVE_DRIVERS = \
-	DRIVERS/VME4LX/DRIVER_K24/driver.mak \
-	DRIVERS/VME4LX/DRIVER_K24/driver_pldz002_cham.mak \
+	DRIVERS/VME_16Z002/driver.mak \
+	DRIVERS/VME_16Z002/driver_pldz002_cham.mak \
 	DRIVERS/CHAMELEON/driver.mak
 
 ALL_NATIVE_LIBS =
@@ -159,5 +167,3 @@ ALL_NATIVE_TOOLS =
 ALL_DESC = system
 
 include $(MEN_LIN_DIR)/BUILD/MDIS/TPL/rules.mak
-
-
