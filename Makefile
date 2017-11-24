@@ -126,6 +126,7 @@ ALL_CORE_LIBS = \
 ALL_LL_TOOLS =
 
 ALL_COM_TOOLS = \
+	FPGA_LOAD/program.mak \
 	MDIS_API/M_ERRSTR/COM/program.mak \
 	MDIS_API/M_GETBLOCK/COM/program.mak \
 	MDIS_API/M_GETSTAT/COM/program.mak \
@@ -148,8 +149,7 @@ ALL_COM_TOOLS = \
 	VME4L_API/VME4L_SLVWIN/program.mak \
 	VME4L_API/VME4L_SPCYCLE/program.mak \
 	VME4L_API/VME4L_CTRL/program.mak \
-	VME4L_API/VME4L_IRQGEN/program.mak \
-	FPGA_LOAD/program.mak
+	VME4L_API/VME4L_IRQGEN/program.mak
 
 ALL_NATIVE_DRIVERS = \
 	DRIVERS/VME_16Z002/driver.mak \
