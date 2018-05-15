@@ -22,7 +22,7 @@ WIZ_CDK = Selfhosted
 # typically /usr/src/linux. This directory is used when
 # building the kernel modules.
 
-LIN_KERNEL_DIR = /usr/src/linux-current
+LIN_KERNEL_DIR = /usr/src/linux
 
 # Defines whether to build MDIS to support RTAI. If enabled,
 # MDIS modules support RTAI in addition to the standard Linux
@@ -58,7 +58,7 @@ LIB_MODE = shared
 # of the modules issue many debug messages using printk's for
 # trouble shooting
 
-ALL_DBGS = dbg
+ALL_DBGS = nodbg
 
 # The directory in which the kernel modules are to be
 # installed. Usually this is the target's
@@ -150,6 +150,9 @@ ALL_COM_TOOLS = \
 	VME4L_API/VME4L_SPCYCLE/program.mak \
 	VME4L_API/VME4L_CTRL/program.mak \
 	VME4L_API/VME4L_IRQGEN/program.mak
+
+
+#	VME4L_API/VME4L_IRQTEST/program.mak
 
 ALL_NATIVE_DRIVERS = \
 	DRIVERS/VME_16Z002/driver.mak \
